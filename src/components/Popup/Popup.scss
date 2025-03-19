@@ -1,0 +1,84 @@
+.popup {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 552px;
+  width: 100%;
+  min-height: 476px;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  border-radius: 30px;
+  background-color: #fff;
+  transition: opacity 0.3s ease-in;
+
+  @media (max-width: 1024px) {
+    max-width: 453px;
+  }
+
+  @media (max-width: 767px) {
+    max-width: 100%;
+    min-height: 100%;
+    border-radius: 0;
+  }
+
+  &--open {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  &__header {
+    margin: 0 0 6px;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 40px;
+
+    @media (max-width: 767px) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  &__descr {
+    margin: 0 0 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #808080;
+
+    @media (max-width: 767px) {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+
+  &__close-btn {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+
+    @media (max-width: 767px) {
+      width: 24px;
+      height: 24px;
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+
+      @media (max-width: 767px) {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+}
